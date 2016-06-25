@@ -1,24 +1,22 @@
 body {
   margin: 0;
-  width: 100%; }
-
-#output {
-  width: 50%;
-  background: red;
-  padding-right: 10%; }
-
-#calcContainer {
-  width: 50rem;
-  height: 45rem; }
-
-#oprContainer {
-  float: left;
-  display: block; }
-
-#numContainer {
   text-align: center; }
 
+table {
+  background: pink;
+  margin: 0 auto; }
+
+#output {
+  background: grey;
+  display: block;
+  height: 3vw;
+  width: 33%;
+  margin: 0 auto; }
+
 .button {
-  width: 25%; }
+  padding: 12px 22px;
+  width: 6vw;
+  display: block;
+  margin: 10px 10px; }
 
 /*# sourceMappingURL=main.css.map */

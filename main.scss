@@ -1,24 +1,53 @@
 body{
   margin: 0;
-  width: 100%;
-}
-#output {
-  width: 50%;
-  background: red;
-  padding-right: 10%;
-}
-
-#calcContainer {
-  width: 50rem;
-  height: 45rem;
-}
-#oprContainer {
-  float: left;
-  display: block;
-}
-#numContainer {
   text-align: center;
 }
+// #calcContainer {
+//   width: 9rem;
+//   margin: 10% auto;
+//   background: black;
+//   height: 20vw;
+//   padding: 0 2%;
+//   border-radius: 10%;
+// }
+// #output {
+//   background: yellow;
+//   padding-top: 25%;
+//   display: block;
+//   margin: 0 auto;
+//   margin-bottom: 10%;
+//   }
+// #numContainer {
+//     float: left;
+//     margin-top: 15%;
+//   }
+// #oprContainer {
+//   float: right;
+// }
+//
+// .button {
+//   width: 30%;
+//   display: block;
+//   float: left;
+//   margin: 0 auto;
+// }
+
+table {
+  background: pink;
+  margin: 0 auto;
+}
+
+#output {
+  background: grey;
+display: block;
+height: 3vw;
+width: 33%;
+margin: 0 auto;
+}
+
 .button {
-width: 25%;
+  padding: 12px 22px;
+width: 6vw;
+display: block;
+margin: 10px 10px;
 }
