@@ -91,11 +91,12 @@ equalsBtn.addEventListener('click', function(evt) {
     var input2 = [];
     var breakPnt;
     var breakOpr;
+    var stringNumBr;
 
     if (eqnString.includes('+')) {
       breakPnt = eqnString.indexOf('+');
       breakOpr = '+';
-      var stringNumBr = breakPnt;
+      stringNumBr = breakPnt;
       input1 = eqnString.substring(0, breakPnt);
       input2 = eqnString.substring((breakPnt + 1), eqnString.length);
 
@@ -103,23 +104,43 @@ equalsBtn.addEventListener('click', function(evt) {
       var sum = Number(input1) + Number(input2);
       console.log(sum);
       output.innerText = sum;
-
     }
+
     else if (eqnString.includes('-')) {
       breakPnt = eqnString.indexOf('-');
       breakOpr = '-';
+      stringNumBr = breakPnt;
+        //since breakPnt is indexed, no need to subtract 1 from it...
+      input1 = eqnString.substring(0, breakPnt);
+          //need to add 1 to breakPnt so as not to grab operator in input2
+      input2 = eqnString.substring((breakPnt + 1), eqnString.length);
+
+      var subtract = Number(input1) - Number(input2);
+      console.log(subtract);
+      output.innerText = subtract;
     }
+
     else if (eqnString.includes('*')) {
       breakPnt = eqnString.indexOf('*');
       breakOpr = '*';
+      input1 = eqnString.substring(0, breakPnt);
+      input2 = eqnString.substring((breakPnt + 1), eqnString.length);
+
+      var product = Number(input1) + Number(input2);
+      console.log(multiply);
+      output.innerText = product;
     }
+
     else if (eqnString.includes('/')) {
       breakPnt = eqnString.indexOf('/');
       breakOpr = '/';
+      input1 = eqnString.substring(0, breakPnt);
+      input2 = eqnString.substring((breakPnt + 1), eqnString.length);
+
+      var quotient = Number(input1) + Number(input2);
+      console.log(quotient);
+      output.innerText = quotient;
     }
-
-// pop() and .slice() array to get first and second input values!
-
 
 
 //     eqnValue.forEach(function (input1, breakOpr, input2) {
