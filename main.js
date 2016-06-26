@@ -126,8 +126,8 @@ equalsBtn.addEventListener('click', function(evt) {
       input1 = eqnString.substring(0, breakPnt);
       input2 = eqnString.substring((breakPnt + 1), eqnString.length);
 
-      var product = Number(input1) + Number(input2);
-      console.log(multiply);
+      var product = Number(input1) * Number(input2);
+      console.log(product);
       output.innerText = product;
     }
 
@@ -137,7 +137,7 @@ equalsBtn.addEventListener('click', function(evt) {
       input1 = eqnString.substring(0, breakPnt);
       input2 = eqnString.substring((breakPnt + 1), eqnString.length);
 
-      var quotient = Number(input1) + Number(input2);
+      var quotient = Number(input1) / Number(input2);
       console.log(quotient);
       output.innerText = quotient;
     }
