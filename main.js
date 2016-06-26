@@ -74,6 +74,11 @@ divideBtn.addEventListener('click', function() {
     var operatorOutput = document.querySelector('#output');
     output.value += '/';
 });
+var operatorBtn = document.querySelector('#decimalBtn');
+decimalBtn.addEventListener('click', function() {
+    var operatorOutput = document.querySelector('#output');
+    output.value += '.';
+});
 var operatorBtn = document.querySelector('#clearBtn');
 clearBtn.addEventListener('click', function() {
     var operatorOutput = document.querySelector('#output');
