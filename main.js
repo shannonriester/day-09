@@ -86,17 +86,24 @@ equalsBtn.addEventListener('click', function(evt) {
 
 
     var eqnString = output.value;
-    console.log(eqnString);
-    var input1;
-    var input2;
+    // console.log(eqnString);
+    var input1 = [];
+    var input2 = [];
     var breakPnt;
     var breakOpr;
 
     if (eqnString.includes('+')) {
       breakPnt = eqnString.indexOf('+');
       breakOpr = '+';
-      eqnString[2] = breakPnt;
-      console.log(breakPnt);
+      var stringNumBr = breakPnt;
+      input1 = eqnString.substring(0, breakPnt);
+      input2 = eqnString.substring((breakPnt + 1), eqnString.length);
+
+      //add the two numbers together
+      var sum = Number(input1) + Number(input2);
+      console.log(sum);
+      output.innerText = sum;
+
     }
     else if (eqnString.includes('-')) {
       breakPnt = eqnString.indexOf('-');
@@ -111,10 +118,14 @@ equalsBtn.addEventListener('click', function(evt) {
       breakOpr = '/';
     }
 
+// pop() and .slice() array to get first and second input values!
+
+
 
 //     eqnValue.forEach(function (input1, breakOpr, input2) {
 //       console.log(input1, breakOpr, input2);
 // });
+
 
 
 
