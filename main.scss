@@ -1,53 +1,59 @@
 body{
   margin: 0;
   text-align: center;
+  color: #FFF;
+  font-size: 2.5rem;
+  font-family: Arial, Optima, "Times New Roman", serif;
 }
-// #calcContainer {
-//   width: 9rem;
-//   margin: 10% auto;
-//   background: black;
-//   height: 20vw;
-//   padding: 0 2%;
-//   border-radius: 10%;
-// }
-// #output {
-//   background: yellow;
-//   padding-top: 25%;
-//   display: block;
-//   margin: 0 auto;
-//   margin-bottom: 10%;
-//   }
-// #numContainer {
-//     float: left;
-//     margin-top: 15%;
-//   }
-// #oprContainer {
-//   float: right;
-// }
-//
-// .button {
-//   width: 30%;
-//   display: block;
-//   float: left;
-//   margin: 0 auto;
-// }
 
 table {
-  background: pink;
+  background: none;
   margin: 0 auto;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 0;
+  margin: 0;
+  float: left;
+  border: solid #868686 1px;
 }
 
 #output {
-  background: grey;
+background: #287782;
+opacity: .8;
 display: block;
-height: 3vw;
-width: 33%;
+height: 6.5vw;
+width: 24.8%;
 margin: 0 auto;
+margin-top: 5%;
 }
 
 .button {
-  padding: 12px 22px;
 width: 6vw;
-display: block;
-margin: 10px 10px;
+height: 5vw;
+font-size: 2rem;
+background: #E0E0E0;
+border: none;
+}
+
+.numBtn {
+  background: #E0E0E0;
+}
+
+.operatorBtn {
+  background: #D6D6D6;
+}
+
+#tdZero {
+  width: 49.1%;
+}
+
+#zeroBtn {
+  width: 100%;
+}
+
+#divideBtn, #multiplyBtn, #subtractBtn, #addBtn, #equalsBtn {
+  background: #FF8C00;
+  color: #FFF;
 }

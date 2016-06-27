@@ -1,22 +1,51 @@
 body {
   margin: 0;
-  text-align: center; }
+  text-align: center;
+  color: #FFF;
+  font-size: 2.5rem;
+  font-family: Arial, Optima, "Times New Roman", serif; }
 
 table {
-  background: pink;
-  margin: 0 auto; }
+  background: none;
+  margin: 0 auto;
+  border-collapse: collapse; }
+
+td {
+  padding: 0;
+  margin: 0;
+  float: left;
+  border: solid #868686 1px; }
 
 #output {
-  background: grey;
+  background: #287782;
+  opacity: .8;
   display: block;
-  height: 3vw;
-  width: 33%;
-  margin: 0 auto; }
+  height: 6.5vw;
+  width: 24.8%;
+  margin: 0 auto;
+  margin-top: 5%; }
 
 .button {
-  padding: 12px 22px;
   width: 6vw;
-  display: block;
-  margin: 10px 10px; }
+  height: 5vw;
+  font-size: 2rem;
+  background: #E0E0E0;
+  border: none; }
+
+.numBtn {
+  background: #E0E0E0; }
+
+.operatorBtn {
+  background: #D6D6D6; }
+
+#tdZero {
+  width: 49.1%; }
+
+#zeroBtn {
+  width: 100%; }
+
+#divideBtn, #multiplyBtn, #subtractBtn, #addBtn, #equalsBtn {
+  background: #FF8C00;
+  color: #FFF; }
 
 /*# sourceMappingURL=main.css.map */

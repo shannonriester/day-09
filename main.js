@@ -85,108 +85,73 @@ clearBtn.addEventListener('click', function() {
     output.value = '';
 });
 
+
+var operatorBtn = document.querySelector('#plusMinusBtn');
+plusMinusBtn.addEventListener('click', function() {
+
+    if (breakPnt === undefined) {
+        output.value = output.value * -1;
+    }
+    else if (breakPnt !== undefined){
+        negativePnt = eqnString.substring((breakPnt + 1), eqnString.length);
+        input2 = negativePnt * -1;
+        console.log(input2 + " input2");
+    }
+});
+
+var eqnString = output.value;
+var input1 = [];
+var input2 = [];
+var breakPnt;
+var breakOpr;
+var stringNumBr;
+var negativePnt;
+
 //get the equals button to initiate math process
 var equalsBtn = document.querySelector('#equalsBtn');
 equalsBtn.addEventListener('click', function(evt) {
 
-
-    var eqnString = output.value;
-    // console.log(eqnString);
-    var input1 = [];
-    var input2 = [];
-    var breakPnt;
-    var breakOpr;
-    var stringNumBr;
-
     if (eqnString.includes('+')) {
-      breakPnt = eqnString.indexOf('+');
-      breakOpr = '+';
-      stringNumBr = breakPnt;
-      input1 = eqnString.substring(0, breakPnt);
-      input2 = eqnString.substring((breakPnt + 1), eqnString.length);
+        breakPnt = eqnString.indexOf('+');
+        breakOpr = '+';
+        stringNumBr = breakPnt;
+        input1 = eqnString.substring(0, breakPnt);
+        input2 = eqnString.substring((breakPnt + 1), eqnString.length);
 
-      //add the two numbers together
-      var sum = Number(input1) + Number(input2);
-      console.log(sum);
-      output.innerText = sum;
-    }
-
-    else if (eqnString.includes('-')) {
-      breakPnt = eqnString.indexOf('-');
-      breakOpr = '-';
-      stringNumBr = breakPnt;
+        //add the two numbers together
+        var sum = Number(input1) + Number(input2);
+        console.log(sum);
+        output.innerText = sum;
+    } else if (eqnString.includes('-')) {
+        breakPnt = eqnString.indexOf('-');
+        breakOpr = '-';
+        stringNumBr = breakPnt;
         //since breakPnt is indexed, no need to subtract 1 from it...
-      input1 = eqnString.substring(0, breakPnt);
-          //need to add 1 to breakPnt so as not to grab operator in input2
-      input2 = eqnString.substring((breakPnt + 1), eqnString.length);
+        input1 = eqnString.substring(0, breakPnt);
+        //need to add 1 to breakPnt so as not to grab operator in input2
+        input2 = eqnString.substring((breakPnt + 1), eqnString.length);
 
-      var subtract = Number(input1) - Number(input2);
-      console.log(subtract);
-      output.innerText = subtract;
+        var subtract = Number(input1) - Number(input2);
+        console.log(subtract);
+        output.innerText = subtract;
+    } else if (eqnString.includes('*')) {
+        breakPnt = eqnString.indexOf('*');
+        breakOpr = '*';
+        input1 = eqnString.substring(0, breakPnt);
+        input2 = eqnString.substring((breakPnt + 1), eqnString.length);
+
+        var product = Number(input1) * Number(input2);
+        console.log(product);
+        output.innerText = product;
+    } else if (eqnString.includes('/')) {
+        breakPnt = eqnString.indexOf('/');
+        breakOpr = '/';
+        input1 = eqnString.substring(0, breakPnt);
+        input2 = eqnString.substring((breakPnt + 1), eqnString.length);
+
+        var quotient = Number(input1) / Number(input2);
+        console.log(quotient);
+        output.innerText = quotient;
     }
-
-    else if (eqnString.includes('*')) {
-      breakPnt = eqnString.indexOf('*');
-      breakOpr = '*';
-      input1 = eqnString.substring(0, breakPnt);
-      input2 = eqnString.substring((breakPnt + 1), eqnString.length);
-
-      var product = Number(input1) * Number(input2);
-      console.log(product);
-      output.innerText = product;
-    }
-
-    else if (eqnString.includes('/')) {
-      breakPnt = eqnString.indexOf('/');
-      breakOpr = '/';
-      input1 = eqnString.substring(0, breakPnt);
-      input2 = eqnString.substring((breakPnt + 1), eqnString.length);
-
-      var quotient = Number(input1) / Number(input2);
-      console.log(quotient);
-      output.innerText = quotient;
-    }
-
-
-//     eqnValue.forEach(function (input1, breakOpr, input2) {
-//       console.log(input1, breakOpr, input2);
-// });
-
-
-
-
-
-
-    // for (i = 0; i < eqnArray.length; i++) {
-    //     // - find when i = operator (store in var)
-    //     if (i = ('+' || '-' || '*' || '/')){
-    //         console.log(breakPnt.defaultValue + " : breakPnt");
-    //     }
-    //     else {
-    //         var msgError = "Error!";
-    //         output.innerText = msgError;
-        // }
-        //     - log length of string before operator
-        //     -log length of string after operator
-        //     - take both strings and operate with operator's value
-
-        // var outputArray = output.value;
-        // var userOperator = outputArray[1];
-        // var input1 = outputArray[0];
-        // var input2 = outputArray[2];
-        //
-        // if (outputArray[1] === '+') {
-        //     var sum = Number(input1) + Number(input2);
-        //     output.innerText = sum;
-        // } else if (outputArray[1] === '-') {
-        //     var difference = Number(input1) - Number(input2);
-        //     output.innerText = difference;
-        // } else if (outputArray[1] === '*') {
-        //     var product = Number(input1) * Number(input2);
-        //     output.innerText = product;
-        // } else if (outputArray[1] === '/') {
-        //     var quotient = Number(input1) / Number(input2);
-        //     output.innerText = quotient;
-        // }
 
 });
